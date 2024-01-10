@@ -7,7 +7,7 @@ class TaskOutput(BaseModel):
     """Class that represents the result of a task."""
 
     description: str = Field(description="Description of the task")
-    summary: Optional[str] = Field(description="Summary of the task", default=None)
+    summary: Optional[str] = Field(description="Summary of the task - narrative", default=None)
     result: str = Field(description="Result of the task")
 
     @model_validator(mode="after")
